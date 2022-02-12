@@ -34,36 +34,20 @@ public class PlayerAttack : MonoBehaviour
         }     
     }
     void FixedUpdate()
-    {
-        /*if (Input.GetMouseButton(0))
-        {
-            t += Time.deltaTime * speed;
-
-            damage = Mathf.PingPong(t, maxDamage);
-        }
-
-       if (Input.GetMouseButtonUp(0))
-        {
-            t = 0.0f;
-
-            print($"piu piu {damage}");
-        }
-        */
-
-        
-        
+    {   
         if(isCharging == false){
             Impulse();
-            strengthAttack = 0f;
             movespeed._moveSpeed = 7f;  
             isCharging = true;
         }
     }
     
     
-     void Impulse()
+    void Impulse()
     {
-        rb.AddForce(transform.right * strengthAttack * 300f);
+        // rb.velocity = new Vector2(10f, 10f);
+        rb.AddForce(transform.right * strengthAttack * 300f); 
+        strengthAttack = 0f;
     }
 
     void myInputs()
