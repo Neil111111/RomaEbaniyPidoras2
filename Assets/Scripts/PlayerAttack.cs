@@ -10,10 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public bool isCharging = true;
     MovementSystem movespeed;
     Rigidbody2D rb;
-    /*public float damage = 0.0f;
-    public float maxDamage = 100.0f;
-    public float speed = 2.0f;
-    public float t = 0.0f;*/
+    
 
     
     void Awake()

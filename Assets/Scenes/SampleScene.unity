@@ -991,6 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+  _strengthAttack: {fileID: 710596568}
 --- !u!50 &788654171
 Rigidbody2D:
   serializedVersion: 4

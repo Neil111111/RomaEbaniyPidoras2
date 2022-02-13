@@ -10,7 +10,6 @@ public class EnemySystem : MonoBehaviour
     public void TakeHit(float damage)
     {
         
-
         enemyHealth -= (damage * _strengthAttack.strengthAttack) + 10;
 
         if(enemyHealth <= 0)
