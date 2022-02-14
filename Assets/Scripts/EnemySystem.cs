@@ -6,6 +6,7 @@ public class EnemySystem : MonoBehaviour
 {
     public float enemyHealth;
     public float speed;
+    public int score;
 
     public GameObject bloodParticles;
     /*public float stopDis;
@@ -48,6 +49,8 @@ public class EnemySystem : MonoBehaviour
         {
             Die();
             Instantiate(bloodParticles,transform.position,Quaternion.identity);
+            score +=1;
+            
         }
     }
     void Die()
