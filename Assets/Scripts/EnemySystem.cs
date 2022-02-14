@@ -14,13 +14,15 @@ public class EnemySystem : MonoBehaviour
     public Transform player;
     public PlayerAttack _strengthAttack;
 
+
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;   
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update() 
     {   
+        
         //Shooting Enemy
         /*if(Vector2.Distance(transform.position,player.position) > stopDis)
         {
@@ -52,4 +54,5 @@ public class EnemySystem : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }

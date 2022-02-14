@@ -17,7 +17,8 @@ public class MovementSystem : MonoBehaviour
     public Camera cam;
 
     //Vectors
-    Vector2 mousePos;
+    public Vector2 mousePos;
+    public Vector2 lookDir;
 
     void Awake()
     {

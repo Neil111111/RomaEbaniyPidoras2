@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour
     public float strengthAttack;
     public float maxStrengthAttack;
     public bool isCharging = true;
+    public MovementSystem _movementSystem;
     MovementSystem movespeed;
     Rigidbody2D rb;
     
@@ -42,8 +43,8 @@ public class PlayerAttack : MonoBehaviour
     
     void Impulse()
     {
-        // rb.velocity = new Vector2(10f, 10f);
         rb.AddForce(transform.right * strengthAttack * 300f); 
+        //rb.AddForce(new Vector2(movespeed.lookDir * strengthAttack,0));
         strengthAttack = 0f;
     }
 
