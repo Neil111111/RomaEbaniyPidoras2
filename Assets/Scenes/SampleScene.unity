@@ -731,7 +731,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.82306
+  orthographic size: 4.92
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1528,7 +1528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1904336806
 Transform:
   m_ObjectHideFlags: 0
@@ -1678,6 +1678,10 @@ PrefabInstance:
     - target: {fileID: 1986551022644686278, guid: 870950bde41ac2a449128bdd8a7712b1, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986551022644686278, guid: 870950bde41ac2a449128bdd8a7712b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1986551022644686279, guid: 870950bde41ac2a449128bdd8a7712b1, type: 3}
       propertyPath: m_RootOrder
