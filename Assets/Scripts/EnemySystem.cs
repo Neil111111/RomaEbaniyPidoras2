@@ -6,14 +6,17 @@ public class EnemySystem : MonoBehaviour
 {
     public float enemyHealth;
     public float speed;
-    public int score;
+    public float enemyDamage;
+    
 
     public GameObject bloodParticles;
+    public GameObject playerObject;
     /*public float stopDis;
     public float retreatDis;*/
 
     public Transform player;
     public PlayerAttack _strengthAttack;
+    public MovementSystem _playerHealth;
 
 
     void Start()
@@ -49,13 +52,25 @@ public class EnemySystem : MonoBehaviour
         {
             Die();
             Instantiate(bloodParticles,transform.position,Quaternion.identity);
-            score +=1;
             
         }
     }
+
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+       if(coll.gameObject.tag == "Player")
+       {
+           _playerHealth.playerHealth -= 10f;
+           Destroy(gameObject);
+           if(_playerHealth.playerHealth <=0){
+               Destroy(playerObject);
+           }
+       }
     }
 
 }

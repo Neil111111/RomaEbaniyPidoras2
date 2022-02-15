@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();    
         movespeed = GetComponent<MovementSystem>();
+
     }
 
     void Update()
@@ -55,6 +56,7 @@ public class PlayerAttack : MonoBehaviour
             isCharging = false;
         }
     }
+
     
    
 }

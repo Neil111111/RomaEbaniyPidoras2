@@ -1046,6 +1046,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 7
+  playerHealth: 0
+  maxPlayerHealth: 100
   cam: {fileID: 519420031}
   mousePos: {x: 0, y: 0}
   lookDir: {x: 0, y: 0}
@@ -1168,7 +1170,7 @@ MonoBehaviour:
   strengthAttack: 0
   maxStrengthAttack: 10
   isCharging: 1
-  _movementSystem: {fileID: 0}
+  _movementSystem: {fileID: 710596563}
 --- !u!1 &788654168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1986551022644686278, guid: 870950bde41ac2a449128bdd8a7712b1, type: 3}
@@ -1671,6 +1673,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 710596567}
+    - target: {fileID: 1986551022644686276, guid: 870950bde41ac2a449128bdd8a7712b1, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 710596562}
+    - target: {fileID: 1986551022644686276, guid: 870950bde41ac2a449128bdd8a7712b1, type: 3}
+      propertyPath: _playerHealth
+      value: 
+      objectReference: {fileID: 710596563}
     - target: {fileID: 1986551022644686276, guid: 870950bde41ac2a449128bdd8a7712b1, type: 3}
       propertyPath: _strengthAttack
       value: 

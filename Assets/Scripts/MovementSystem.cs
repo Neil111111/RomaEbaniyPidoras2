@@ -7,6 +7,10 @@ public class MovementSystem : MonoBehaviour
     //Movements Variables
     public float _moveSpeed = 7f;
 
+    //Health Variables
+    public float playerHealth;
+    public float maxPlayerHealth = 100f;
+    EnemySystem _takeHit;
 
     //Inputs
     private float xInp;
@@ -24,6 +28,12 @@ public class MovementSystem : MonoBehaviour
     {
        rb = GetComponent<Rigidbody2D>(); 
     }
+
+    void Start()
+    {
+        playerHealth = maxPlayerHealth;
+    }
+
     void Update()
     {
         playerRotate();
@@ -42,6 +52,7 @@ public class MovementSystem : MonoBehaviour
 
         rb.velocity = new Vector3(xInp * _moveSpeed,yInp * _moveSpeed,0f);
     }
+
     void playerRotate()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -51,4 +62,5 @@ public class MovementSystem : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
     }
+    
 }
