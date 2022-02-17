@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovementSystem : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MovementSystem : MonoBehaviour
     public float playerHealth;
     public float maxPlayerHealth = 100f;
     EnemySystem _takeHit;
+    public TextMesh hpText;
 
     //Inputs
     private float xInp;
@@ -24,9 +26,11 @@ public class MovementSystem : MonoBehaviour
     public Vector2 mousePos;
     public Vector2 lookDir;
 
+
     void Awake()
     {
        rb = GetComponent<Rigidbody2D>(); 
+       hpText = GetComponent<TextMesh>();
     }
 
     void Start()
@@ -37,6 +41,7 @@ public class MovementSystem : MonoBehaviour
     void Update()
     {
         playerRotate();
+        hpText.text = $"{playerHealth} / {maxPlayerHealth}";
     }
     
     void FixedUpdate()

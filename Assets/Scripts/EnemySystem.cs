@@ -48,12 +48,16 @@ public class EnemySystem : MonoBehaviour
         
         enemyHealth -= (damage * _strengthAttack.strengthAttack) + 10;
 
-        if(enemyHealth <= 0)
-        {
+        if(enemyHealth <= 0){
+        
             Die();
             Instantiate(bloodParticles,transform.position,Quaternion.identity);
             
         }
+        if(_playerHealth.playerHealth <= 0 ){
+               Destroy(playerObject);
+               Instantiate(bloodParticles,transform.position, Quaternion.identity);
+           }
     }
 
     void Die()
@@ -66,10 +70,9 @@ public class EnemySystem : MonoBehaviour
        if(coll.gameObject.tag == "Player")
        {
            _playerHealth.playerHealth -= 10f;
-           Destroy(gameObject);
-           if(_playerHealth.playerHealth <=0){
-               Destroy(playerObject);
-           }
+           Die();
+           Instantiate(bloodParticles, transform.position, Quaternion.identity);
+           
        }
     }
 
