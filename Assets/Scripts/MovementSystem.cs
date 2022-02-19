@@ -12,7 +12,7 @@ public class MovementSystem : MonoBehaviour
     public float playerHealth;
     public float maxPlayerHealth = 100f;
     EnemySystem _takeHit;
-    public TextMesh hpText;
+
 
     //Inputs
     private float xInp;
@@ -23,14 +23,13 @@ public class MovementSystem : MonoBehaviour
     public Camera cam;
 
     //Vectors
-    public Vector2 mousePos;
-    public Vector2 lookDir;
+    private Vector2 mousePos;
+    private Vector2 lookDir;
 
 
     void Awake()
     {
        rb = GetComponent<Rigidbody2D>(); 
-       hpText = GetComponent<TextMesh>();
     }
 
     void Start()
@@ -41,7 +40,6 @@ public class MovementSystem : MonoBehaviour
     void Update()
     {
         playerRotate();
-        hpText.text = $"{playerHealth} / {maxPlayerHealth}";
     }
     
     void FixedUpdate()
